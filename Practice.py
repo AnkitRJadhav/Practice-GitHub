@@ -1,13 +1,12 @@
-str1 = "fg hjg kih utb"
-lst1 = []
-lst2 = []
-for i in range(len(str1)):
-    if str1[i] == " ":
-        lst1.append(i)
+str1 = "AaBcDcde"
+str2 = ""
+for i in str1:
+    if str1.lower().count(i.lower()) > 1:
+        pass
     else:
-        lst2.append(str1[i])
-lst2 = lst2[::-1]
-for i in lst1:
-    lst2.insert(i, " ")
-print("".join(lst2))
+        str2 += i
+for i in str2:
+    for j in range(len(str1)):
+        if i == str1[j]:
+            print("Index of ", i, " is ", j)
 
